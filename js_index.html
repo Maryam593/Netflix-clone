@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic html page</title>
+    <style>
+         .FAQ{
+            width: 70vw;
+     margin: 0 auto;  
+    gap:40px;
+    /* padding: 30px 30px 20px 20px; */
+    padding-top: 60px;
+    padding-bottom: 120px;
+         }
+         .box{
+            display: flex; 
+    transition:  all 1s ease-out;  
+    background-color: rgb(85, 84, 84);
+    color: white;
+    max-width:50vw;
+    /* width: 100%; */
+    /* margin-bottom: 20px; */
+    height:50px; 
+    padding: 13px;
+    margin:0px auto;
+     justify-content: space-between;
+    margin-bottom: 30px;
+         }
+         button{
+            background-color: rgb(85, 84, 84); 
+         }
+     #text-one{
+        padding: 10px; 
+    font-size:30px;
+    font-weight: 300;
+         }
+         #display{
+            /* background-color: red; */
+            width: 669px;
+            height:200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto;
+            position: relative;
+            top:-30px;
+            padding: 20px;
+            /* transition:  all 1s ease-out;  */
+        
+         }
+    </style>
+</head>
+<body>
+    <section class="FAQ">
+        <h2 style="color: white; font-size:30px;">Frequently Ask Questions</h2>
+       <br><br>
+        <div class="box"><span id="text-one">What is netflix</span> <button id = "btn">
+            <svg width="35" height="35"  viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V20" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M4 12H20" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+        </button>
+        </div>
+        <div id="display"><p> </p></div> 
+    </div>
+       
+          
+    </section>
+
+
+    <script>
+         let b = document.getElementById("display");
+         
+        //  b.hidden = false;
+        // b.style.backgroundColor = "rgb(85, 84, 84)";
+         let a = document.getElementById("btn");
+         a.addEventListener("click",()=>
+         { 
+
+            
+             b.style.backgroundColor = "rgb(85, 84, 84)";
+             b.style.color = "White";
+             document.querySelector("#display").innerHTML = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe voluptatibus veritatis quasi vitae beatae quisquam ut facere tempore, explicabo veniam! Itaque dolorem alias maiores libero tempora laborum voluptates in iure.
+        Asperiores dicta totam consectetur optio architecto ipsum quas commodi iure hic libero expedita, praesentium consequuntur et reiciendis possimus ad nihil modi ullam ab cum! Expedita eum modi maxime odit exercitationem?
+        Eligendi cum sunt nobis? Reprehenderit eos ratione eligendi officia labore unde doloremque incidunt molestiae cum animi impedit, tempora optio error illum facilis explicabo dolore minus magni consequatur sequi cupiditate`
+         
+         })
+    
+    </script>
+</body>
+</html>
